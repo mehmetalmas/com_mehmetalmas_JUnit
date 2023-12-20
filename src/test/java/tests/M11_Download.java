@@ -7,7 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import java.io.File;
@@ -15,7 +14,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.Duration;
 
-public class M11_Upload_Download {
+public class M11_Download {
     static WebDriver driver;
     Actions actions;
 
@@ -55,7 +54,7 @@ public class M11_Upload_Download {
         Thread.sleep(3000); // indirme süresi icin zaman verelim
 
 
-        // Bu test icin olusturdugumuz instance isFileDownloaded metodunu kullanalim(asagida)
+        // Bu test icin olusturdugumuz instance isFileDownloaded metodunu kullanalim(en asagida)
         boolean isDownloaded = isFileDownloaded(path, fileName);
         System.out.println(isDownloaded);
 
@@ -65,7 +64,7 @@ public class M11_Upload_Download {
     public void downloadTest2() throws InterruptedException {
         driver.get("https://the-internet.herokuapp.com/download");
 
-        WebElement spectrumLogo = driver.findElement(By.xpath("//a[text()='spectrum-logo.png']"));
+        WebElement spectrumLogo = driver.findElement(By.xpath("//a[text()='spectrum-logo.png' and @href =\"download/spectrum-logo.png\" ]"));
         Thread.sleep(3000);
         String filePath = "H:\\spectrum-logo";  //Dosya yolunu dosya adi ile direk girdik, üstteki cözümde tüm inen
         // dosya klasörünü bir Array aldik ve icinde arama yaptik
@@ -73,6 +72,14 @@ public class M11_Upload_Download {
         Assert.assertTrue(Files.exists(Paths.get(filePath)));
 
     }
+
+
+
+
+
+
+
+
 
 
 
