@@ -3,14 +3,11 @@ package tests;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
 import java.time.Duration;
 
 public class M13_Upload2 {
@@ -18,18 +15,14 @@ public class M13_Upload2 {
     WebDriver driver;
     Actions actions;
 
-
     @Before
     public void setUP () {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-
     }
-
     /*
     SetFileDetector() metodu;
-
         Selenium da WebDriver yardımıyla dosya yükleme işlemlerinde kullandığımız bir diğer metot da
         setFileDetector() metodudur.
 
@@ -63,7 +56,6 @@ public class M13_Upload2 {
         Bu sayede, dosya yükleme işlemimizi uzak bir sunucuda gerçekleştirilebiliriz.
     */
 
-
     @Test
     public void upLoad() {
         driver.get("https://demoqa.com/upload-download");
@@ -84,15 +76,5 @@ public class M13_Upload2 {
         RemoteWebDriver remoteWebDriver;
 
         //DesiredCapabilities.internetExplorer();
-
-
-
-
-
-
-
     }
-
-
-
 }

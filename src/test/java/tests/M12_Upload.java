@@ -1,33 +1,25 @@
 package tests;
-
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
-
 public class M12_Upload {
 
     WebDriver driver;
     Actions actions;
-
 
     @Before
     public void setUP () {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-
     }
-
 
     @Test
     public void upLoad() {
@@ -48,13 +40,8 @@ public class M12_Upload {
         actions.click();
         actions.sendKeys(filePath);
         actions.build().perform();
-
-
-
         //WebElement uploadedFilePath = driver.findElement(By.id("uploadedFilePath"));
         //boolean isElementDisplayed = uploadedFilePath.isDisplayed();
-
-
     }
 
     @Test
@@ -76,17 +63,5 @@ public class M12_Upload {
 
         WebElement uploadedFilePath = driver.findElement(By.id("uploadedFilePath"));
         boolean isElementDisplayed = uploadedFilePath.isDisplayed();
-
-
-
-
-
-
     }
-
-
-
-
-
-
 }

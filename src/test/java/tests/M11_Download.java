@@ -8,13 +8,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.Duration;
 
 public class M11_Download {
+
     static WebDriver driver;
     Actions actions;
 
@@ -28,10 +28,8 @@ public class M11_Download {
     }
 
 
-
     @Test
     public void downloadTest() throws InterruptedException {
-
 /*
         driver.get("https://demoqa.com/");
 
@@ -76,14 +74,6 @@ public class M11_Download {
 
 
 
-
-
-
-
-
-
-
-
     public static boolean isFileDownloaded(String downloadPath, String fileName){
         // Bu metot bilgisayara inen dosyayi belirtilen yolda(klasörde) ariyor
         // bunu java daki File class ile yapiyoruz, bu sinif ile bilgisayardaki dosyalara ulasabiliriz
@@ -101,9 +91,5 @@ public class M11_Download {
         //degilse false döndürsün
         return false;
     }
-
-
-
-
 
 }
