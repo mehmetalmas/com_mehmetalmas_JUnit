@@ -17,6 +17,7 @@
 
     <dependencies>
 
+        <!-- Driver olusturup uygulama uzerinde gercek kullanici gibi tum islemleri yapar(Tiklama, yazi yazma...) -->
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -24,6 +25,7 @@
             <version>4.15.0</version>
         </dependency>
 
+        <!-- Test anatosyonlari ve test yapabilmek icin -->
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
@@ -31,12 +33,23 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Extent Report icin -->
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
         <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.13</version>
-            <scope>test</scope>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>4.0.9</version>
         </dependency>
+
+        <!--Microsoft Office belgeleriyle (Word, Excel, PowerPoint) çalışmak için kullanılır -->
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.3</version>
+        </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
         <dependency>
